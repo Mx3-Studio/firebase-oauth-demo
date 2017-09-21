@@ -1,0 +1,3 @@
+<p>{{ (user | async)?.displayName }}</p>
+<button (click)="login()" *ngIf="!(user | async)?.uid">Login</button>
+<button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
